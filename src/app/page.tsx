@@ -1,10 +1,15 @@
 "use client";
 
+import Features from "@/components/Features";
 import HeroSection from "@/components/HeroSection";
+// import { features } from "./features.constants";
+// import { Card } from "@heroui/card";
+// import { cn } from "@heroui/theme";
 // import { Button } from "@heroui/button";
 // import useMousePosition from "@/hooks/useMousePosition";
 // import useIsMobile from "@/hooks/useIsMobile";
-// import { motion } from "framer-motion";
+// import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+// import { useRef } from "react";
 // import { useState } from "react";
 
 export default function Home() {
@@ -12,9 +17,20 @@ export default function Home() {
   // const { x, y } = useMousePosition();
   // const isMobile = useIsMobile();
   // const size = isHovered ? 400 : 40;
+
+  // const container = useRef<HTMLDivElement>(null);
+  // const { scrollYProgress } = useScroll({
+  //   target: container,
+  //   offset: ["start end", "start start"],
+  // });
+
+  // const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+
   return (
     <>
       <HeroSection />
+      <Features />
+
       {/* <main className="h-screen">
         {!isMobile && (
           <motion.div
