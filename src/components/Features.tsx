@@ -1,5 +1,5 @@
 import { features } from "@/app/features.constants";
-import { Card } from "@heroui/card";
+import { Card, CardBody, CardHeader } from "@heroui/card";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -33,6 +33,8 @@ function FeatureCard({
   title,
   color,
   index,
+  description,
+  src,
   progress,
   range,
   targetScale,
@@ -42,7 +44,6 @@ function FeatureCard({
   index: number;
   description: string;
   src: string;
-  link: string;
   progress: MotionValue<number>;
   range: [number, number];
   targetScale: number;
@@ -57,12 +58,26 @@ function FeatureCard({
     >
       <Card
         style={{
-          backgroundColor: color,
-          marginTop: index * 100,
+          background: color,
+          marginTop: index * 130,
         }}
         className="h-full w-full"
       >
-        {title}
+        <CardHeader className="flex flex-col items-center justify-center">
+          <p className="text-xl font-bold">{title}</p>
+          <p className="text-sm">{description}</p>
+        </CardHeader>
+        <CardBody className="flex items-center justify-center">
+          <div className="relative aspect-video h-full w-full">
+            <video
+              className="absolute inset-0 h-full w-full overflow-hidden rounded-2xl object-cover object-top"
+              src={src}
+              autoPlay
+              muted
+              loop
+            />
+          </div>
+        </CardBody>
       </Card>
     </motion.div>
   );

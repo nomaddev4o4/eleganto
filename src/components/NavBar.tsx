@@ -7,7 +7,7 @@ import { Tab, Tabs } from "@heroui/tabs";
 
 export default function NavBar() {
   return (
-    <Navbar>
+    <Navbar maxWidth="xl" position="static">
       <NavbarBrand>
         <div className="flex items-end gap-2">
           <p className="text-3xl">Eleganto</p>
