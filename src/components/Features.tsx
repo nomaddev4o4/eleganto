@@ -1,7 +1,7 @@
 import { features } from "@/app/features.constants";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useCallback } from "react";
 
 export default function Features() {
   const cardContainer = useRef<HTMLDivElement>(null);
@@ -11,7 +11,7 @@ export default function Features() {
   });
 
   return (
-    <main ref={cardContainer}>
+    <main ref={cardContainer} className="relative">
       {features.map((feature, i) => {
         const targetScale = 1 - (features.length - i - 1) * 0.05;
         return (
@@ -50,11 +50,21 @@ function FeatureCard({
 }) {
   const scale = useTransform(progress, range, [1, targetScale]);
 
+  const handleVideoLoad = useCallback(
+    (e: React.SyntheticEvent<HTMLVideoElement>) => {
+      e.currentTarget.playbackRate = 0.75; // Slow down video playback for better performance
+    },
+    [],
+  );
+
   return (
     <motion.div
-      className="sticky top-0 flex h-screen items-center justify-center"
+      className="sticky top-0 flex h-screen items-center justify-center will-change-transform"
       key={title}
       style={{ scale }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
     >
       <Card
         style={{
@@ -75,6 +85,8 @@ function FeatureCard({
               autoPlay
               muted
               loop
+              playsInline
+              onLoadedData={handleVideoLoad}
             />
           </div>
         </CardBody>
