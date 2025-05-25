@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ensure proper backdrop for navbar and other components over the animated background */
+@layer components {
+  .backdrop-blur-navbar {
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .text-over-gradient {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-over-gradient {
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}

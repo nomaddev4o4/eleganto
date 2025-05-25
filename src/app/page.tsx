@@ -1,6 +1,7 @@
 "use client";
 
 import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 // import { features } from "./features.constants";
 // import { Card } from "@heroui/card";
@@ -30,6 +31,7 @@ export default function Home() {
     <>
       <HeroSection />
       <Features />
+      {/* <Footer /> */}
 
       {/* <main className="h-screen">
         {!isMobile && (

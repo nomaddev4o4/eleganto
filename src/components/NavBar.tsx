@@ -7,10 +7,17 @@ import { Tab, Tabs } from "@heroui/tabs";
 
 export default function NavBar() {
   return (
-    <Navbar maxWidth="xl" position="static">
+    <Navbar
+      maxWidth="xl"
+      className="backdrop-blur-navbar"
+      classNames={{
+        base: "bg-transparent",
+        wrapper: "px-4 sm:px-6",
+      }}
+    >
       <NavbarBrand>
         <div className="flex items-end gap-2">
-          <p className="text-3xl">Eleganto</p>
+          <p className="text-over-gradient text-3xl">Eleganto</p>
           <Chip size="sm" className="mb-1">
             chat
           </Chip>
