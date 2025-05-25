@@ -17,7 +17,7 @@ export default function NavBar() {
     >
       <NavbarBrand>
         <div className="flex items-end gap-2">
-          <p className="text-over-gradient text-3xl">Eleganto</p>
+          <p className="text-over-gradient text-3xl">HeroUI</p>
           <Chip size="sm" className="mb-1">
             chat
           </Chip>

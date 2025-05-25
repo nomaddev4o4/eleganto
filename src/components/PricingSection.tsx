@@ -126,6 +126,7 @@ export default function PricingSection() {
                   <motion.div
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 0.4 }}
                     className={`rounded-full border border-white/20 bg-gradient-to-r ${plan.badge.color} px-3 py-1.5 backdrop-blur-sm sm:px-4 sm:py-2`}
                   >

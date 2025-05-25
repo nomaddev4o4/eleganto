@@ -92,6 +92,7 @@ function FeatureCard({
             className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-sm"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.4 }}
           >
             <span className="text-sm font-medium text-white/80">
@@ -103,6 +104,7 @@ function FeatureCard({
             className="text-over-gradient bg-gradient-to-b from-white/95 to-white/70 bg-clip-text text-4xl font-bold text-transparent"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
             {title}
@@ -112,6 +114,7 @@ function FeatureCard({
             className="text-over-gradient max-w-2xl text-lg text-white/70"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
             {description}
@@ -123,6 +126,7 @@ function FeatureCard({
             className="relative aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-white/20 shadow-2xl"
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 0.6 }}
             whileHover={{ scale: 1.02 }}
           >

@@ -58,6 +58,7 @@ export default function CommunityUseCases() {
             className="mb-6 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-sm"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.4 }}
           >
             <span className="text-sm font-medium text-white/80">
@@ -69,6 +70,7 @@ export default function CommunityUseCases() {
             className="text-over-gradient mb-6 bg-gradient-to-b from-white/90 to-white/50 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
             Loved by developers & designers
@@ -78,6 +80,7 @@ export default function CommunityUseCases() {
             className="text-over-gradient mx-auto max-w-2xl text-lg text-white/70 sm:text-xl"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
             Join thousands of creators building amazing experiences with our
