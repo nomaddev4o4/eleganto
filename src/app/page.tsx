@@ -3,6 +3,7 @@
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
+import PricingSection from "@/components/PricingSection";
 // import { features } from "./features.constants";
 // import { Card } from "@heroui/card";
 // import { cn } from "@heroui/theme";
@@ -31,6 +32,7 @@ export default function Home() {
     <>
       <HeroSection />
       <Features />
+      <PricingSection />
       <Footer />
 
       {/* <main className="h-screen">
