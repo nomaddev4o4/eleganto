@@ -31,7 +31,7 @@ export default function Home() {
     <>
       <HeroSection />
       <Features />
-      {/* <Footer /> */}
+      <Footer />
 
       {/* <main className="h-screen">
         {!isMobile && (
