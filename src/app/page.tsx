@@ -1,5 +1,6 @@
 "use client";
 
+import CommunityUseCases from "@/components/CommunityUseCases";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
@@ -32,6 +33,7 @@ export default function Home() {
     <>
       <HeroSection />
       <Features />
+      <CommunityUseCases />
       <PricingSection />
       <Footer />
 
