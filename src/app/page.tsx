@@ -1,5 +1,6 @@
 "use client";
 
+import BultWith from "@/components/BultWith";
 import CommunityUseCases from "@/components/CommunityUseCases";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
@@ -31,6 +32,7 @@ export default function Home() {
 
   return (
     <>
+      <BultWith />
       <HeroSection />
       <Features />
       <CommunityUseCases />

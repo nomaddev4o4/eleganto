@@ -1,7 +1,6 @@
 import { Button } from "@heroui/button";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { motion } from "framer-motion";
-import { CheckIcon } from "@heroicons/react/24/outline";
 
 const pricingPlans = [
   {
@@ -188,7 +187,6 @@ export default function PricingSection() {
                     <ul className="space-y-3">
                       {plan.features.map((feature) => (
                         <li key={feature} className="flex items-start">
-                          <CheckIcon className="mr-3 mt-0.5 h-4 w-4 flex-shrink-0 text-green-400" />
                           <span className="text-over-gradient text-sm text-white/70">
                             {feature}
                           </span>

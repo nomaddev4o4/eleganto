@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar";
 import { ReactLenis } from "@/utils/lenis";
 import { AppBackgroundGradient } from "@/components/ui/AppBackgroundGradient";
 import "./globals.css";
+import ThemeProvider from "@/providers/ThemeProvider";
 
 const cabinetGrotesk = localFont({
   src: "./fonts/CabinetGrotesk-Variable.woff2",
@@ -33,8 +34,10 @@ export default function RootLayout({
             touchMultiplier: 2,
           }}
         />
-        <NavBar />
-        {children}
+        <ThemeProvider>
+          <NavBar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
