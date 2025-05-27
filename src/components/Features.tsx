@@ -93,7 +93,7 @@ export default function Features() {
   });
 
   return (
-    <main ref={cardContainer} className="relative py-20">
+    <main id="features" ref={cardContainer} className="relative py-20">
       <div className="mb-20 text-center">
         <h2 className="text-over-gradient mb-6 bg-gradient-to-b from-white/90 to-white/50 bg-clip-text text-6xl font-bold text-transparent">
           Features

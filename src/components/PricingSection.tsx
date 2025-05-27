@@ -89,7 +89,7 @@ const pricingPlans = [
 
 export default function PricingSection() {
   return (
-    <section className="relative py-20">
+    <section id="pricing" className="relative py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
