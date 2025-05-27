@@ -32,9 +32,9 @@ export default function Home() {
 
   return (
     <>
-      <BultWith />
       <HeroSection />
       <Features />
+      <BultWith />
       <CommunityUseCases />
       <PricingSection />
       <Footer />

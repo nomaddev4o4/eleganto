@@ -1,6 +1,11 @@
 import { Accordion, AccordionItem } from "@heroui/accordion";
+import { SVGProps } from "react";
 
-const MonitorMobileIcon = (props) => {
+interface IconProps extends SVGProps<SVGSVGElement> {
+  className?: string;
+}
+
+const MonitorMobileIcon = (props: IconProps) => {
   return (
     <svg
       aria-hidden="true"
@@ -58,7 +63,7 @@ const MonitorMobileIcon = (props) => {
   );
 };
 
-const ShieldSecurityIcon = (props) => {
+const ShieldSecurityIcon = (props: IconProps) => {
   return (
     <svg
       aria-hidden="true"
@@ -97,7 +102,7 @@ const ShieldSecurityIcon = (props) => {
   );
 };
 
-const InfoIcon = (props) => {
+const InfoIcon = (props: IconProps) => {
   return (
     <svg
       aria-hidden="true"
@@ -134,7 +139,7 @@ const InfoIcon = (props) => {
   );
 };
 
-const InvalidCardIcon = (props) => {
+const InvalidCardIcon = (props: IconProps) => {
   return (
     <svg
       aria-hidden="true"
