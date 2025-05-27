@@ -80,11 +80,11 @@ function FeatureCard({
     >
       <Card
         className={cn(
-          "card-over-gradient h-[85vh] w-full max-w-6xl overflow-hidden border border-white/10 shadow-2xl",
+          "card-over-gradient h-[75vh] w-full max-w-6xl overflow-hidden border border-white/10 shadow-2xl",
           "bg-black/20 backdrop-blur-xl",
         )}
         style={{
-          marginTop: index * 80,
+          marginTop: index * 70,
         }}
       >
         <CardHeader className="flex flex-col items-center justify-center space-y-4 p-8 text-center">

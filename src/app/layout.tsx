@@ -25,15 +25,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${cabinetGrotesk.className} antialiased`}>
         <AppBackgroundGradient />
-        <ReactLenis
-          root
-          options={{
-            lerp: 0.1,
-            duration: 1.2,
-            smoothWheel: true,
-            touchMultiplier: 2,
-          }}
-        />
+        <ReactLenis root />
         <ThemeProvider>
           <NavBar />
           {children}

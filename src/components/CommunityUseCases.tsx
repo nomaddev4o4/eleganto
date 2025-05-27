@@ -4,147 +4,147 @@ import { ThreeDMarquee } from "./ui/ThreeDMarquee";
 export default function CommunityUseCases() {
   const useCases = [
     {
-      image: "./images/image1.png",
+      image: "./images/image1.webp",
       link: "https://x.com/jrgarciadev/status/1924469908005323175",
     },
     {
-      image: "./images/image2.png",
+      image: "./images/image2.webp",
       link: "https://www.heroui.com/",
     },
     {
-      image: "./images/image3.png",
+      image: "./images/image3.webp",
       link: "https://heroui-chat-five.vercel.app/",
     },
     {
-      image: "./images/image10.png",
+      image: "./images/image10.webp",
       link: "https://x.com/inkko44/status/1924126088210366470",
     },
     {
-      image: "./images/image5.png",
+      image: "./images/image5.webp",
       link: "https://x.com/hero_ui/status/1909407579320860774",
     },
     {
-      image: "./images/image6.png",
+      image: "./images/image6.webp",
       link: "https://www.coderabbit.ai/",
     },
     {
-      image: "./images/image7.png",
+      image: "./images/image7.webp",
       link: "https://www.mochii.ai/",
     },
     {
-      image: "./images/image8.png",
+      image: "./images/image8.webp",
       link: "https://lowdefy.com/",
     },
     {
-      image: "./images/image9.png",
+      image: "./images/image9.webp",
       link: "https://chartbrew.com/",
     },
     {
-      image: "./images/image10.png",
+      image: "./images/image10.webp",
       link: "https://www.likn.co/en",
     },
     {
-      image: "./images/image11.png",
+      image: "./images/image11.webp",
       link: "https://www.encur.me/",
     },
     {
-      image: "./images/image12.png",
+      image: "./images/image12.webp",
       link: "https://heroui.chat/",
     },
     {
-      image: "./images/image1.png",
+      image: "./images/image1.webp",
       link: "https://x.com/jrgarciadev/status/1924469908005323175",
     },
     {
-      image: "./images/image2.png",
+      image: "./images/image2.webp",
       link: "https://www.heroui.com/",
     },
     {
-      image: "./images/image3.png",
+      image: "./images/image3.webp",
       link: "https://heroui-chat-five.vercel.app/",
     },
     {
-      image: "./images/image10.png",
+      image: "./images/image10.webp",
       link: "https://x.com/inkko44/status/1924126088210366470",
     },
     {
-      image: "./images/image5.png",
+      image: "./images/image5.webp",
       link: "https://x.com/hero_ui/status/1909407579320860774",
     },
     {
-      image: "./images/image6.png",
+      image: "./images/image6.webp",
       link: "https://www.coderabbit.ai/",
     },
     {
-      image: "./images/image7.png",
+      image: "./images/image7.webp",
       link: "https://www.mochii.ai/",
     },
     {
-      image: "./images/image8.png",
+      image: "./images/image8.webp",
       link: "https://lowdefy.com/",
     },
     {
-      image: "./images/image9.png",
+      image: "./images/image9.webp",
       link: "https://chartbrew.com/",
     },
     {
-      image: "./images/image10.png",
+      image: "./images/image10.webp",
       link: "https://www.likn.co/en",
     },
     {
-      image: "./images/image11.png",
+      image: "./images/image11.webp",
       link: "https://www.encur.me/",
     },
     {
-      image: "./images/image12.png",
+      image: "./images/image12.webp",
       link: "https://heroui.chat/",
     },
     {
-      image: "./images/image1.png",
+      image: "./images/image1.webp",
       link: "https://x.com/jrgarciadev/status/1924469908005323175",
     },
     {
-      image: "./images/image2.png",
+      image: "./images/image2.webp",
       link: "https://www.heroui.com/",
     },
     {
-      image: "./images/image3.png",
+      image: "./images/image3.webp",
       link: "https://heroui-chat-five.vercel.app/",
     },
     {
-      image: "./images/image10.png",
+      image: "./images/image10.webp",
       link: "https://x.com/inkko44/status/1924126088210366470",
     },
     {
-      image: "./images/image5.png",
+      image: "./images/image5.webp",
       link: "https://x.com/hero_ui/status/1909407579320860774",
     },
     {
-      image: "./images/image6.png",
+      image: "./images/image6.webp",
       link: "https://www.coderabbit.ai/",
     },
     {
-      image: "./images/image7.png",
+      image: "./images/image7.webp",
       link: "https://www.mochii.ai/",
     },
     {
-      image: "./images/image8.png",
+      image: "./images/image8.webp",
       link: "https://lowdefy.com/",
     },
     {
-      image: "./images/image9.png",
+      image: "./images/image9.webp",
       link: "https://chartbrew.com/",
     },
     {
-      image: "./images/image10.png",
+      image: "./images/image10.webp",
       link: "https://www.likn.co/en",
     },
     {
-      image: "./images/image11.png",
+      image: "./images/image11.webp",
       link: "https://www.encur.me/",
     },
     {
-      image: "./images/image12.png",
+      image: "./images/image12.webp",
       link: "https://heroui.chat/",
     },
   ];
