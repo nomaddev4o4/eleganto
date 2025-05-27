@@ -2,38 +2,151 @@ import { motion } from "framer-motion";
 import { ThreeDMarquee } from "./ui/ThreeDMarquee";
 
 export default function CommunityUseCases() {
-  const images = [
-    "https://assets.aceternity.com/cloudinary_bkp/3d-card.png",
-    "https://assets.aceternity.com/animated-modal.png",
-    "https://assets.aceternity.com/animated-testimonials.webp",
-    "https://assets.aceternity.com/cloudinary_bkp/Tooltip_luwy44.png",
-    "https://assets.aceternity.com/github-globe.png",
-    "https://assets.aceternity.com/glare-card.png",
-    "https://assets.aceternity.com/layout-grid.png",
-    "https://assets.aceternity.com/flip-text.png",
-    "https://assets.aceternity.com/hero-highlight.png",
-    "https://assets.aceternity.com/carousel.webp",
-    "https://assets.aceternity.com/placeholders-and-vanish-input.png",
-    "https://assets.aceternity.com/shooting-stars-and-stars-background.png",
-    "https://assets.aceternity.com/signup-form.png",
-    "https://assets.aceternity.com/cloudinary_bkp/stars_sxle3d.png",
-    "https://assets.aceternity.com/spotlight-new.webp",
-    "https://assets.aceternity.com/cloudinary_bkp/Spotlight_ar5jpr.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Parallax_Scroll_pzlatw_anfkh7.png",
-    "https://assets.aceternity.com/tabs.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Tracing_Beam_npujte.png",
-    "https://assets.aceternity.com/cloudinary_bkp/typewriter-effect.png",
-    "https://assets.aceternity.com/glowing-effect.webp",
-    "https://assets.aceternity.com/hover-border-gradient.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Infinite_Moving_Cards_evhzur.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Lamp_hlq3ln.png",
-    "https://assets.aceternity.com/macbook-scroll.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Meteors_fye3ys.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Moving_Border_yn78lv.png",
-    "https://assets.aceternity.com/multi-step-loader.png",
-    "https://assets.aceternity.com/vortex.png",
-    "https://assets.aceternity.com/wobble-card.png",
-    "https://assets.aceternity.com/world-map.webp",
+  const useCases = [
+    {
+      image: "./images/image1.png",
+      link: "https://x.com/jrgarciadev/status/1924469908005323175",
+    },
+    {
+      image: "./images/image2.png",
+      link: "https://www.heroui.com/",
+    },
+    {
+      image: "./images/image3.png",
+      link: "https://heroui-chat-five.vercel.app/",
+    },
+    {
+      image: "./images/image10.png",
+      link: "https://x.com/inkko44/status/1924126088210366470",
+    },
+    {
+      image: "./images/image5.png",
+      link: "https://x.com/hero_ui/status/1909407579320860774",
+    },
+    {
+      image: "./images/image6.png",
+      link: "https://www.coderabbit.ai/",
+    },
+    {
+      image: "./images/image7.png",
+      link: "https://www.mochii.ai/",
+    },
+    {
+      image: "./images/image8.png",
+      link: "https://lowdefy.com/",
+    },
+    {
+      image: "./images/image9.png",
+      link: "https://chartbrew.com/",
+    },
+    {
+      image: "./images/image10.png",
+      link: "https://www.likn.co/en",
+    },
+    {
+      image: "./images/image11.png",
+      link: "https://www.encur.me/",
+    },
+    {
+      image: "./images/image12.png",
+      link: "https://heroui.chat/",
+    },
+    {
+      image: "./images/image1.png",
+      link: "https://x.com/jrgarciadev/status/1924469908005323175",
+    },
+    {
+      image: "./images/image2.png",
+      link: "https://www.heroui.com/",
+    },
+    {
+      image: "./images/image3.png",
+      link: "https://heroui-chat-five.vercel.app/",
+    },
+    {
+      image: "./images/image10.png",
+      link: "https://x.com/inkko44/status/1924126088210366470",
+    },
+    {
+      image: "./images/image5.png",
+      link: "https://x.com/hero_ui/status/1909407579320860774",
+    },
+    {
+      image: "./images/image6.png",
+      link: "https://www.coderabbit.ai/",
+    },
+    {
+      image: "./images/image7.png",
+      link: "https://www.mochii.ai/",
+    },
+    {
+      image: "./images/image8.png",
+      link: "https://lowdefy.com/",
+    },
+    {
+      image: "./images/image9.png",
+      link: "https://chartbrew.com/",
+    },
+    {
+      image: "./images/image10.png",
+      link: "https://www.likn.co/en",
+    },
+    {
+      image: "./images/image11.png",
+      link: "https://www.encur.me/",
+    },
+    {
+      image: "./images/image12.png",
+      link: "https://heroui.chat/",
+    },
+    {
+      image: "./images/image1.png",
+      link: "https://x.com/jrgarciadev/status/1924469908005323175",
+    },
+    {
+      image: "./images/image2.png",
+      link: "https://www.heroui.com/",
+    },
+    {
+      image: "./images/image3.png",
+      link: "https://heroui-chat-five.vercel.app/",
+    },
+    {
+      image: "./images/image10.png",
+      link: "https://x.com/inkko44/status/1924126088210366470",
+    },
+    {
+      image: "./images/image5.png",
+      link: "https://x.com/hero_ui/status/1909407579320860774",
+    },
+    {
+      image: "./images/image6.png",
+      link: "https://www.coderabbit.ai/",
+    },
+    {
+      image: "./images/image7.png",
+      link: "https://www.mochii.ai/",
+    },
+    {
+      image: "./images/image8.png",
+      link: "https://lowdefy.com/",
+    },
+    {
+      image: "./images/image9.png",
+      link: "https://chartbrew.com/",
+    },
+    {
+      image: "./images/image10.png",
+      link: "https://www.likn.co/en",
+    },
+    {
+      image: "./images/image11.png",
+      link: "https://www.encur.me/",
+    },
+    {
+      image: "./images/image12.png",
+      link: "https://heroui.chat/",
+    },
   ];
 
   const stats = [
@@ -124,7 +237,7 @@ export default function CommunityUseCases() {
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.7 }}
       >
-        <ThreeDMarquee images={images} />
+        <ThreeDMarquee useCases={useCases} />
       </motion.div>
 
       {/* Bottom CTA */}

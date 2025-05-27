@@ -2,19 +2,27 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@heroui/theme";
+import Link from "next/link";
+
+interface UseCase {
+  image: string;
+  link: string;
+}
+
 export const ThreeDMarquee = ({
-  images,
+  useCases,
   className,
 }: {
-  images: string[];
+  useCases: UseCase[];
   className?: string;
 }) => {
-  // Split the images array into 4 equal parts
-  const chunkSize = Math.ceil(images.length / 4);
+  // Split the useCases array into 4 equal parts
+  const chunkSize = Math.ceil(useCases.length / 4);
   const chunks = Array.from({ length: 4 }, (_, colIndex) => {
     const start = colIndex * chunkSize;
-    return images.slice(start, start + chunkSize);
+    return useCases.slice(start, start + chunkSize);
   });
+
   return (
     <div
       className={cn(
@@ -42,24 +50,32 @@ export const ThreeDMarquee = ({
                 className="flex flex-col items-start gap-8"
               >
                 <GridLineVertical className="-left-4" offset="80px" />
-                {subarray.map((image, imageIndex) => (
-                  <div className="relative" key={imageIndex + image}>
+                {subarray.map((useCase, imageIndex) => (
+                  <div className="relative" key={imageIndex + useCase.image}>
                     <GridLineHorizontal className="-top-4" offset="20px" />
-                    <motion.img
-                      whileHover={{
-                        y: -10,
-                      }}
-                      transition={{
-                        duration: 0.3,
-                        ease: "easeInOut",
-                      }}
-                      key={imageIndex + image}
-                      src={image}
-                      alt={`Image ${imageIndex + 1}`}
-                      className="aspect-[970/700] rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl"
-                      width={970}
-                      height={700}
-                    />
+                    <Link
+                      href={useCase.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <motion.img
+                        whileHover={{
+                          y: -10,
+                          scale: 1.02,
+                        }}
+                        transition={{
+                          duration: 0.3,
+                          ease: "easeInOut",
+                        }}
+                        key={imageIndex + useCase.image}
+                        src={useCase.image}
+                        alt={`Use case ${imageIndex + 1}`}
+                        className="aspect-[970/700] cursor-pointer rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl hover:ring-2 hover:ring-purple-400/50"
+                        width={970}
+                        height={700}
+                      />
+                    </Link>
                   </div>
                 ))}
               </motion.div>
