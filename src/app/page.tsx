@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import BultWith from "@/components/BultWith";
 import CommunityUseCases from "@/components/CommunityUseCases";
@@ -6,6 +6,7 @@ import Features from "@/components/Features";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import PricingSection from "@/components/PricingSection";
+import TestimonialSection from "@/components/TestimonialSection";
 // import { features } from "./features.constants";
 // import { Card } from "@heroui/card";
 // import { cn } from "@heroui/theme";
@@ -36,6 +37,7 @@ export default function Home() {
       <Features />
       <BultWith />
       <CommunityUseCases />
+      <TestimonialSection />
       <PricingSection />
       <Footer />
 

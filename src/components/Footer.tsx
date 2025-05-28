@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import Content from "./Content";
 import { Particles } from "./ui/Particles";
 

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+
 import { features } from "@/app/features.constants";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import {
@@ -8,7 +9,7 @@ import {
   useTransform,
   useSpring,
 } from "framer-motion";
-import { useRef, useCallback, useState, useEffect, useMemo } from "react";
+import { useRef, useCallback, useState, useEffect, useMemo, memo } from "react";
 import { cn } from "@heroui/theme";
 
 // Custom hook for optimized video management
@@ -121,7 +122,7 @@ export default function Features() {
   );
 }
 
-const FeatureCard = React.memo(function FeatureCard({
+const FeatureCard = memo(function FeatureCard({
   title,
   color,
   index,

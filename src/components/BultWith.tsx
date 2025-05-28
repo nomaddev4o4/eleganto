@@ -1,3 +1,5 @@
+"use client";
+
 import ComponentsGroup from "./ui/ComponentsGroup";
 import { Button } from "@heroui/button";
 import { motion } from "framer-motion";
