@@ -1,6 +1,6 @@
 "use client";
 
-import { features } from "@/app/features.constants";
+import { features } from "@/constants";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import {
   motion,

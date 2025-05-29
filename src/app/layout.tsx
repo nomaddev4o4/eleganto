@@ -3,8 +3,8 @@ import localFont from "next/font/local";
 import NavBar from "@/components/NavBar";
 import { ReactLenis } from "@/utils/lenis";
 import { AppBackgroundGradient } from "@/components/ui/AppBackgroundGradient";
-import "./globals.css";
 import ThemeProvider from "@/providers/ThemeProvider";
+import "./globals.css";
 
 const cabinetGrotesk = localFont({
   src: "./fonts/CabinetGrotesk-Variable.woff2",

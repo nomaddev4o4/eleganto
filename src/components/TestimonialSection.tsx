@@ -4,21 +4,9 @@ import { Card, CardBody } from "@heroui/card";
 import { ClientTweetCard } from "./ui/TweetCardClient";
 import { motion } from "framer-motion";
 import { cn } from "@heroui/theme";
+import { tweets } from "@/constants";
 
 export default function TestimonialSection() {
-  const tweets = [
-    "https://x.com/jrgarciadev/status/1924469908005323175",
-    "https://x.com/DhruvalGolakiya/status/1924127336020009337",
-    "https://x.com/inkko44/status/1924126088210366470",
-    "https://x.com/jrgarciadev/status/1923489702704771265",
-    "https://x.com/meetbagda035/status/1916377999861023072",
-    "https://x.com/therahulogy/status/1913583737733783944",
-    "https://x.com/benswerd/status/1912209694057472021",
-    "https://x.com/codesandbox/status/1906779656050680249",
-    "https://x.com/genzpatel/status/1906734880823853514",
-    "https://x.com/stopachka/status/1906751668957618321",
-  ];
-
   // Handle card click to open tweet in new tab
   const handleCardClick = (tweetUrl: string) => {
     window.open(tweetUrl, "_blank", "noopener,noreferrer");
