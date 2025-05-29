@@ -5,6 +5,8 @@ import { ClientTweetCard } from "./ui/TweetCardClient";
 import { motion } from "framer-motion";
 import { cn } from "@heroui/theme";
 import { tweets } from "@/constants";
+import { Button } from "@heroui/button";
+import Link from "next/link";
 
 export default function TestimonialSection() {
   // Handle card click to open tweet in new tab
@@ -191,32 +193,26 @@ export default function TestimonialSection() {
             <p className="text-over-gradient mb-6 bg-gradient-to-b from-white/80 to-white/40 bg-clip-text text-transparent">
               Start building amazing UIs with HeroUI today
             </p>
-            <motion.button
-              className="rounded-full border border-white/20 bg-white/10 px-6 py-3 font-medium text-white backdrop-blur-sm transition-all duration-500 hover:scale-105 hover:bg-white/20"
-              whileHover={{
-                y: -3,
-                scale: 1.05,
-                boxShadow: "0 8px 20px -5px rgba(255, 255, 255, 0.15)",
-                transition: {
-                  type: "spring",
-                  stiffness: 200,
-                  damping: 25,
-                  duration: 0.4,
-                },
-              }}
+            <motion.div
               whileTap={{
-                scale: 0.97,
-                y: -1,
-                transition: {
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 30,
-                  duration: 0.2,
-                },
+                scale: 0.95,
+                transition: { duration: 0.1 },
               }}
             >
-              Get Started Now
-            </motion.button>
+              <Button
+                radius="full"
+                size="lg"
+                color="primary"
+                className="border border-white/20 bg-white/10 backdrop-blur-sm"
+                as={Link}
+                href="https://heroui.chat/"
+                target="_blank"
+                disableRipple
+                fullWidth
+              >
+                Get Started
+              </Button>
+            </motion.div>
           </CardBody>
         </Card>
       </motion.div>

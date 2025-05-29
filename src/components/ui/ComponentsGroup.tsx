@@ -45,16 +45,16 @@ const componentPositions: Position[] = [
   // Top row - scattered across width
   { top: "8%", left: "5%", animation: animations.float }, // Card image
   { top: "12%", left: "50%", animation: animations.floatDelay1 }, // Button
-  { top: "20%", left: "45%", animation: animations.bounceDelay1 }, // Chip
+  { top: "26%", left: "55%", animation: animations.bounceDelay1 }, // Chip
 
   // Second row - more spread out
-  { top: "48%", right: "0%", animation: animations.bounce }, // Accordion
+  { top: "55%", right: "0%", animation: animations.bounce }, // Accordion
   { top: "32%", right: "25%", animation: animations.pulseDelay1 }, // Circular Progress
   { top: "65%", left: "65%", animation: animations.floatDelay2 }, // Spinner
 
   // Third row - center and sides
   { top: "10%", left: "25%", animation: animations.pulse }, // Checkbox Group
-  { top: "26%", left: "28%", animation: animations.floatDelay3 }, // Snippet
+  { top: "20%", left: "28%", animation: animations.floatDelay3 }, // Snippet
   { top: "42%", right: "12%", animation: animations.bounceDelay2 }, // Switch (inline)
 
   // Fourth row - lower section

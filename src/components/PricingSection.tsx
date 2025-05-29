@@ -4,6 +4,7 @@ import { Button } from "@heroui/button";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { motion } from "framer-motion";
 import { pricingPlans } from "@/constants";
+import Link from "next/link";
 
 export default function PricingSection() {
   return (
@@ -58,6 +59,9 @@ export default function PricingSection() {
                 className={`card-over-gradient h-full border border-white/10 bg-black/20 backdrop-blur-xl transition-all duration-300 hover:border-white/20 hover:shadow-2xl ${
                   plan.popular ? "border-white/20 shadow-2xl lg:scale-105" : ""
                 }`}
+                as={Link}
+                href="https://heroui.chat/"
+                target="_blank"
               >
                 <CardHeader className="p-6 text-center sm:p-8">
                   <div className="space-y-4 sm:space-y-6">

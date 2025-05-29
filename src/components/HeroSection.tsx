@@ -2,6 +2,7 @@
 
 import { Button } from "@heroui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -92,6 +93,10 @@ export default function HeroSection() {
               size="lg"
               color="primary"
               className="border border-white/20 bg-white/10 backdrop-blur-sm"
+              as={Link}
+              href="https://heroui.chat/"
+              target="_blank"
+              disableRipple
             >
               Get Started
             </Button>
