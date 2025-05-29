@@ -25,11 +25,11 @@ export default function TestimonialSection() {
         transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
         <h2 className="text-over-gradient mb-4 bg-gradient-to-b from-white/95 to-white/70 bg-clip-text text-4xl font-bold text-transparent drop-shadow-2xl sm:text-5xl md:text-6xl">
-          What People Are Saying
+          Creators Love HeroUI Chat
         </h2>
         <p className="text-over-gradient mx-auto max-w-2xl bg-gradient-to-b from-white/80 to-white/40 bg-clip-text text-lg text-transparent sm:text-xl">
-          Join thousands of developers who are building amazing things with
-          HeroUI
+          See how developers and designers are transforming their workflow with
+          AI-powered website generation
         </p>
       </motion.div>
 
@@ -188,10 +188,10 @@ export default function TestimonialSection() {
         <Card className="card-over-gradient mx-auto max-w-2xl border border-white/10 bg-black/20 backdrop-blur-xl">
           <CardBody className="p-8 text-center">
             <h3 className="text-over-gradient mb-4 bg-gradient-to-b from-white/95 to-white/70 bg-clip-text text-2xl font-bold text-transparent">
-              Ready to join the community?
+              Ready to transform your ideas?
             </h3>
             <p className="text-over-gradient mb-6 bg-gradient-to-b from-white/80 to-white/40 bg-clip-text text-transparent">
-              Start building amazing UIs with HeroUI today
+              Join thousands creating stunning UIs with just a simple prompt
             </p>
             <motion.div
               whileTap={{
@@ -210,7 +210,7 @@ export default function TestimonialSection() {
                 disableRipple
                 fullWidth
               >
-                Get Started
+                Start Creating Now
               </Button>
             </motion.div>
           </CardBody>

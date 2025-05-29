@@ -6,14 +6,14 @@ import { useCases } from "@/constants";
 
 export default function CommunityUseCases() {
   const stats = [
-    { number: "50K+", label: "Developers" },
-    { number: "10K+", label: "Projects Built" },
-    { number: "99.9%", label: "Uptime" },
-    { number: "24/7", label: "Support" },
+    { number: "5K+", label: "Projects Built" },
+    { number: "10K+", label: "Active Creators" },
+    { number: "99.9%", label: "AI Accuracy" },
+    { number: "< 30s", label: "Average Generation Time" },
   ];
 
   return (
-    <section className="relative py-20">
+    <section id="community" className="relative py-20">
       {/* Header */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -31,7 +31,7 @@ export default function CommunityUseCases() {
             transition={{ delay: 0.2, duration: 0.4 }}
           >
             <span className="text-sm font-medium text-white/80">
-              Community Showcase
+              Built by the Community
             </span>
           </motion.div>
 
@@ -42,7 +42,7 @@ export default function CommunityUseCases() {
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            Loved by developers & designers
+            From idea to interface in seconds
           </motion.h2>
 
           <motion.p
@@ -52,9 +52,9 @@ export default function CommunityUseCases() {
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.5 }}
           >
-            Join thousands of creators building amazing experiences with our
-            platform. See what&apos;s possible when creativity meets powerful
-            tools.
+            Thousands of creators are already using HeroUI Chat to transform
+            their prompts into stunning, production-ready components. See
+            what&apos;s possible with AI-powered design.
           </motion.p>
         </motion.div>
 
@@ -106,18 +106,18 @@ export default function CommunityUseCases() {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <p className="text-over-gradient mb-6 text-white/70">
-            Ready to join our community?{" "}
+            Ready to create your first AI-generated component?{" "}
             <a
               href="#pricing"
               className="text-over-gradient bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-medium text-transparent transition-all duration-300 hover:from-purple-300 hover:to-pink-300"
             >
-              Start building today
+              Start generating now
             </a>
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-white/50">
             <span>✓ Free to start</span>
-            <span>✓ No credit card required</span>
-            <span>✓ Join 50K+ developers</span>
+            <span>✓ No prompting experience needed</span>
+            <span>✓ Production-ready code</span>
           </div>
         </motion.div>
       </div>

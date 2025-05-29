@@ -13,18 +13,40 @@ export default function PricingSection() {
         {/* Header */}
         <motion.div
           className="mb-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <h2 className="text-over-gradient mb-6 bg-gradient-to-b from-white/90 to-white/50 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl">
-            Simple Pricing
-          </h2>
-          <p className="text-over-gradient mx-auto max-w-2xl text-lg text-white/70 sm:text-xl">
-            Choose the perfect plan for your needs. Upgrade or downgrade at any
-            time.
-          </p>
+          <motion.h2
+            className="text-over-gradient mb-6 bg-gradient-to-b from-white/90 to-white/50 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl"
+            initial={{ opacity: 0, y: 60, scale: 0.8 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 1.2,
+              ease: [0.25, 0.46, 0.45, 0.94],
+              type: "spring",
+              stiffness: 100,
+              damping: 15,
+            }}
+          >
+            Start Creating Today
+          </motion.h2>
+          <motion.p
+            className="text-over-gradient mx-auto max-w-2xl text-lg text-white/70 sm:text-xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+              ease: [0.25, 0.46, 0.45, 0.94],
+              delay: 0.3,
+            }}
+          >
+            Choose your plan and start generating beautiful UIs with AI. From
+            prototype to production in minutes.
+          </motion.p>
         </motion.div>
 
         {/* Pricing Cards */}
@@ -131,17 +153,17 @@ export default function PricingSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <p className="text-over-gradient mb-6 text-white/70">
-            Need a custom solution?{" "}
+            Need a custom AI solution?{" "}
             <a
               href="#contact"
               className="text-over-gradient bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text font-medium text-transparent hover:from-purple-300 hover:to-pink-300"
             >
-              Contact our sales team
+              Let&apos;s talk about your needs
             </a>
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-white/50">
-            <span>✓ 30-day money-back guarantee</span>
-            <span>✓ No setup fees</span>
+            <span>✓ 7-day free trial</span>
+            <span>✓ No credit card required</span>
             <span>✓ Cancel anytime</span>
           </div>
         </motion.div>

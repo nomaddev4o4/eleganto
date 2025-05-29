@@ -1,127 +1,330 @@
 import React from "react";
 import { Button } from "@heroui/button";
+import { motion } from "framer-motion";
+import Link from "next/link";
+
+// Unified animation variants for consistency
+const fadeInUp = {
+  initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+};
+
+const fadeInScale = {
+  initial: { opacity: 0, scale: 0.9 },
+  animate: { opacity: 1, scale: 1 },
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const staggerItem = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+};
+
+// Consistent transition settings
+const defaultTransition = {
+  duration: 0.6,
+  ease: [0.25, 0.46, 0.45, 0.94],
+};
+
+const springTransition = {
+  duration: 0.8,
+  ease: [0.25, 0.46, 0.45, 0.94],
+  type: "spring",
+  stiffness: 100,
+  damping: 20,
+};
 
 export default function Content() {
   return (
-    <div className="flex min-h-screen w-full flex-col justify-between bg-gradient-to-b from-slate-900/95 to-black/95 px-4 py-8 sm:px-8 md:px-12 lg:py-16">
-      <div className="flex flex-col gap-8 md:gap-16">
+    <motion.div
+      className="flex min-h-screen w-full flex-col justify-between bg-gradient-to-b from-slate-900/95 to-black/95 px-4 py-8 sm:px-8 md:px-12 lg:py-16"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <motion.div
+        className="flex flex-col gap-8 md:gap-16"
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
         <FooterHeader />
         <FooterNav />
-      </div>
+      </motion.div>
       <FooterBottom />
-    </div>
+    </motion.div>
   );
 }
 
 const FooterHeader = () => {
   return (
-    <div className="flex flex-col gap-6 md:gap-8">
+    <motion.div
+      className="flex flex-col gap-6 md:gap-8"
+      variants={fadeInUp}
+      transition={{ ...defaultTransition, delay: 0.2 }}
+    >
       <div className="flex flex-col gap-2 md:gap-4">
-        <h2 className="bg-gradient-to-r from-white to-white/60 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl md:text-5xl lg:text-6xl">
-          Let&apos;s Build Something
-        </h2>
-        <h2 className="bg-gradient-to-r from-white/80 to-white/40 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl md:text-5xl lg:text-6xl">
-          Amazing Together
-        </h2>
-      </div>
-      <p className="max-w-2xl text-base text-white/70 md:text-lg">
-        Ready to transform your ideas into reality? Get in touch and let&apos;s
-        create something extraordinary.
-      </p>
-      <div className="flex flex-col gap-4 sm:flex-row">
-        <Button
-          radius="full"
-          size="lg"
-          color="primary"
-          className="border border-white/20 bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
+        <motion.h2
+          className="bg-gradient-to-r from-white to-white/60 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl md:text-5xl lg:text-6xl"
+          variants={fadeInUp}
+          transition={{ ...springTransition, delay: 0.3 }}
         >
-          Start a Project
-        </Button>
-        <Button
-          radius="full"
-          variant="flat"
-          size="lg"
-          className="border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10"
+          Ready to Create
+        </motion.h2>
+        <motion.h2
+          className="bg-gradient-to-r from-white/80 to-white/40 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl md:text-5xl lg:text-6xl"
+          variants={fadeInUp}
+          transition={{ ...springTransition, delay: 0.4 }}
         >
-          View Portfolio
-        </Button>
+          Something Amazing?
+        </motion.h2>
       </div>
-    </div>
+      <motion.p
+        className="max-w-2xl text-base text-white/70 md:text-lg"
+        variants={fadeInUp}
+        transition={{ ...defaultTransition, delay: 0.5 }}
+      >
+        Transform your ideas into stunning UIs with AI. Join thousands of
+        creators who are already building the future of web.
+      </motion.p>
+      <motion.div
+        className="flex flex-col gap-4 sm:flex-row"
+        variants={fadeInScale}
+        transition={{ ...defaultTransition, delay: 0.6 }}
+      >
+        <motion.div
+          whileHover={{
+            y: -4,
+            transition: { duration: 0.2 },
+          }}
+          whileTap={{
+            scale: 0.98,
+            transition: { duration: 0.1 },
+          }}
+        >
+          <Button
+            radius="full"
+            size="lg"
+            color="primary"
+            className="border border-white/20 bg-white/10 backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
+          >
+            Start Generating
+          </Button>
+        </motion.div>
+        <motion.div
+          whileHover={{
+            y: -4,
+            transition: { duration: 0.2 },
+          }}
+          whileTap={{
+            scale: 0.98,
+            transition: { duration: 0.1 },
+          }}
+        >
+          <Button
+            radius="full"
+            variant="flat"
+            size="lg"
+            className="border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10"
+            as={Link}
+            href="#community"
+          >
+            See Examples
+          </Button>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 
 const FooterNav = () => {
   return (
-    <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">
+    <motion.div
+      className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12"
+      variants={staggerContainer}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      transition={{ delay: 0.7 }}
+    >
       <NavSection
-        title="Company"
-        links={["About Us", "Our Mission", "Team", "Careers"]}
+        title="Product"
+        links={["AI Generator", "Component Library", "Templates", "Pricing"]}
+        index={0}
       />
       <NavSection
-        title="Services"
-        links={["Design", "Development", "Consulting", "Support"]}
+        title="Features"
+        links={[
+          "Smart Generation",
+          "Code Export",
+          "Team Collaboration",
+          "Custom Domains",
+        ]}
+        index={1}
       />
       <NavSection
         title="Resources"
-        links={["Documentation", "Blog", "Case Studies", "Downloads"]}
+        links={["Documentation", "Examples", "Tutorials", "API Reference"]}
+        index={2}
       />
       <NavSection
-        title="Connect"
-        links={["Contact", "Newsletter", "Community", "Events"]}
+        title="Community"
+        links={["Discord", "GitHub", "Twitter", "Support"]}
+        index={3}
       />
-    </div>
+    </motion.div>
   );
 };
 
-const NavSection = ({ title, links }: { title: string; links: string[] }) => {
+const NavSection = ({
+  title,
+  links,
+  index,
+}: {
+  title: string;
+  links: string[];
+  index: number;
+}) => {
   return (
-    <div className="flex flex-col gap-4">
-      <h3 className="border-b border-white/10 pb-2 text-sm font-semibold uppercase tracking-wider text-white/90">
+    <motion.div
+      className="flex flex-col gap-4"
+      variants={fadeInUp}
+      transition={{ ...defaultTransition, delay: index * 0.3, duration: 0.8 }}
+    >
+      <motion.h3
+        className="border-b border-white/10 pb-2 text-sm font-semibold uppercase tracking-wider text-white/90"
+        variants={staggerItem}
+        transition={{ ...defaultTransition, duration: 0.8 }}
+      >
         {title}
-      </h3>
-      <div className="flex flex-col gap-3">
-        {links.map((link, index) => (
-          <a
-            key={index}
+      </motion.h3>
+      <motion.div
+        className="flex flex-col gap-3"
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        {links.map((link, linkIndex) => (
+          <motion.a
+            key={linkIndex}
             href="#"
             className="text-sm text-white/60 transition-colors duration-200 hover:text-white/90"
+            variants={staggerItem}
+            transition={{
+              ...defaultTransition,
+              delay: linkIndex * 0.1,
+              duration: 0.7,
+            }}
+            whileHover={{
+              x: 4,
+              transition: { duration: 0.2 },
+            }}
           >
             {link}
-          </a>
+          </motion.a>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
 const FooterBottom = () => {
   return (
-    <div className="mt-8 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-6 md:mt-0 md:flex-row md:gap-8 md:pt-8">
-      <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
-        <div className="flex items-center gap-2">
+    <motion.div
+      className="mt-8 flex flex-col items-center justify-between gap-6 border-t border-white/10 pt-6 md:mt-0 md:flex-row md:gap-8 md:pt-8"
+      variants={fadeInUp}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      transition={{ ...defaultTransition, delay: 1.0 }}
+    >
+      <motion.div
+        className="flex flex-col items-center gap-4 md:flex-row md:gap-6"
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        <motion.div
+          className="flex items-center gap-2"
+          variants={staggerItem}
+          whileHover={{
+            scale: 1.02,
+            transition: { duration: 0.2 },
+          }}
+        >
           <div className="h-8 w-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600"></div>
-          <span className="text-xl font-bold text-white">HeroUI</span>
-        </div>
-        <p className="text-center text-sm text-white/50 md:text-left">
-          © 2024 HeroUI. All rights reserved.
-        </p>
-      </div>
+          <span className="text-xl font-bold text-white">HeroUI Chat</span>
+        </motion.div>
+        <motion.p
+          className="text-center text-sm text-white/50 md:text-left"
+          variants={staggerItem}
+        >
+          © 2024 HeroUI Chat. Powered by AI, built for creators.
+        </motion.p>
+      </motion.div>
 
-      <div className="flex flex-col items-center gap-4 sm:flex-row md:gap-6">
+      <motion.div
+        className="flex flex-col items-center gap-4 sm:flex-row md:gap-6"
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
         <SocialLinks />
-        <div className="flex gap-4 text-sm text-white/50 md:gap-6">
-          <a href="#" className="transition-colors hover:text-white/80">
+        <motion.div
+          className="flex gap-4 text-sm text-white/50 md:gap-6"
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <motion.a
+            href="#"
+            className="transition-colors hover:text-white/80"
+            variants={staggerItem}
+            whileHover={{
+              y: -2,
+              transition: { duration: 0.2 },
+            }}
+          >
             Privacy
-          </a>
-          <a href="#" className="transition-colors hover:text-white/80">
+          </motion.a>
+          <motion.a
+            href="#"
+            className="transition-colors hover:text-white/80"
+            variants={staggerItem}
+            whileHover={{
+              y: -2,
+              transition: { duration: 0.2 },
+            }}
+          >
             Terms
-          </a>
-          <a href="#" className="transition-colors hover:text-white/80">
-            Cookies
-          </a>
-        </div>
-      </div>
-    </div>
+          </motion.a>
+          <motion.a
+            href="#"
+            className="transition-colors hover:text-white/80"
+            variants={staggerItem}
+            whileHover={{
+              y: -2,
+              transition: { duration: 0.2 },
+            }}
+          >
+            AI Ethics
+          </motion.a>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 
@@ -154,31 +357,38 @@ const SocialLinks = () => {
         </svg>
       ),
     },
-    {
-      name: "LinkedIn",
-      url: "https://linkedin.com",
-      icon: (
-        <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-        </svg>
-      ),
-    },
   ];
 
   return (
-    <div className="flex gap-3">
+    <motion.div
+      className="flex gap-3"
+      variants={staggerContainer}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
       {socials.map((social, index) => (
-        <a
+        <motion.a
           key={index}
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/60 backdrop-blur-sm transition-all duration-200 hover:border-white/20 hover:bg-white/10 hover:text-white/90"
           title={social.name}
+          variants={staggerItem}
+          whileHover={{
+            scale: 1.1,
+            y: -2,
+            transition: { duration: 0.2 },
+          }}
+          whileTap={{
+            scale: 0.95,
+            transition: { duration: 0.1 },
+          }}
         >
           {social.icon}
-        </a>
+        </motion.a>
       ))}
-    </div>
+    </motion.div>
   );
 };

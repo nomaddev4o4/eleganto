@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <main className="flex h-screen flex-col items-center justify-center">
-      <div className="flex flex-col items-center gap-28">
+      <div className="flex flex-col items-center gap-12">
         <div className="text-center text-8xl font-medium">
           <motion.p
             className="text-over-gradient bg-gradient-to-b from-white/90 to-white/30 bg-clip-text text-transparent drop-shadow-2xl"
@@ -57,6 +57,21 @@ export default function HeroSection() {
             Deploy.
           </motion.p>
         </div>
+        <motion.div
+          className="mx-auto max-w-3xl text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94],
+            delay: 0.9,
+          }}
+        >
+          <p className="text-lg leading-relaxed text-white/60">
+            Generate fully functional, stunning, production-ready websites
+          </p>
+        </motion.div>
         <motion.div
           className="flex gap-4"
           initial={{ opacity: 0, y: 40, scale: 0.9 }}
@@ -123,8 +138,10 @@ export default function HeroSection() {
               variant="flat"
               size="lg"
               className="border border-white/10 bg-white/5 backdrop-blur-sm"
+              as={Link}
+              href="#community"
             >
-              Know More
+              See Examples
             </Button>
           </motion.div>
         </motion.div>

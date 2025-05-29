@@ -95,15 +95,43 @@ export default function Features() {
 
   return (
     <main id="features" ref={cardContainer} className="relative py-20">
-      <div className="mb-20 text-center">
-        <h2 className="text-over-gradient mb-6 bg-gradient-to-b from-white/90 to-white/50 bg-clip-text text-6xl font-bold text-transparent">
-          Features
-        </h2>
-        <p className="text-over-gradient mx-auto max-w-2xl text-xl text-white/70">
-          Discover the powerful tools and capabilities that make development
-          seamless and efficient
-        </p>
-      </div>
+      <motion.div
+        className="mb-20 text-center"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+      >
+        <motion.h2
+          className="text-over-gradient mb-6 bg-gradient-to-b from-white/90 to-white/50 bg-clip-text text-6xl font-bold text-transparent"
+          initial={{ opacity: 0, y: 60, scale: 0.8 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 1.2,
+            ease: [0.25, 0.46, 0.45, 0.94],
+            type: "spring",
+            stiffness: 100,
+            damping: 15,
+          }}
+        >
+          Powerful AI Features
+        </motion.h2>
+        <motion.p
+          className="text-over-gradient mx-auto max-w-2xl text-xl text-white/70"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94],
+            delay: 0.3,
+          }}
+        >
+          Experience the future of UI development with intelligent features that
+          transform how you build, iterate, and deploy beautiful interfaces
+        </motion.p>
+      </motion.div>
 
       {features.map((feature, i) => {
         const targetScale = 1 - (features.length - i - 1) * 0.05;
