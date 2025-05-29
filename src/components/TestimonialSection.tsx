@@ -13,7 +13,7 @@ export default function TestimonialSection() {
   };
 
   return (
-    <div className="mx-auto w-full max-w-7xl p-6 py-16">
+    <div id="testimonials" className="mx-auto w-full max-w-7xl p-6 py-16">
       {/* Section Header */}
       <motion.div
         className="mb-16 text-center"

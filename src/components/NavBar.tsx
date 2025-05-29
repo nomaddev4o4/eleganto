@@ -4,69 +4,26 @@ import { Button } from "@heroui/button";
 import { Chip } from "@heroui/chip";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@heroui/navbar";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function NavBar() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-
-    if (element) {
-      // Update URL hash
-      window.history.pushState(null, "", `#${sectionId}`);
-
-      // Get navbar height for offset
-      const navbar = document.querySelector('nav[data-slot="base"]');
-      const navbarHeight = navbar ? navbar.getBoundingClientRect().height : 80;
-
-      // Calculate position with offset
-      const elementPosition =
-        element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - navbarHeight - 20; // Extra 20px padding
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.slice(1);
-
-      if (hash && (hash === "features" || hash === "pricing")) {
-        // Delay to ensure page is loaded
-        setTimeout(() => {
-          const element = document.getElementById(hash);
-          if (element) {
-            const navbar = document.querySelector('nav[data-slot="base"]');
-            const navbarHeight = navbar
-              ? navbar.getBoundingClientRect().height
-              : 80;
-
-            const elementPosition =
-              element.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - navbarHeight - 20;
-
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: "smooth",
-            });
-          }
-        }, 300); // Increased delay for page load
-      }
-    };
-
-    // Handle initial load with hash
-    handleHashChange();
-
-    // Listen for hash changes (back/forward navigation)
-    window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, []);
+  const navItems = [
+    {
+      label: "About",
+      href: "https://x.com/hero_ui/status/1894466374900019270",
+    },
+    {
+      label: "Features",
+      href: "#features",
+    },
+    {
+      label: "Testimonials",
+      href: "#testimonials",
+    },
+    {
+      label: "Pricing",
+      href: "#pricing",
+    },
+  ];
 
   return (
     <Navbar
@@ -94,33 +51,17 @@ export default function NavBar() {
         </div>
       </NavbarBrand>
 
-      <NavbarContent justify="center">
-        <NavbarItem
-          as={Link}
-          href="https://x.com/hero_ui/status/1894466374900019270"
-          target="_blank"
-          className="cursor-pointer text-white/70 transition-colors hover:text-white/90"
-        >
-          About
-        </NavbarItem>
-
-        <NavbarItem>
-          <button
-            onClick={() => scrollToSection("features")}
-            className="font-inherit cursor-pointer border-none bg-transparent p-0 text-white/70 transition-colors hover:text-white/90"
+      <NavbarContent justify="center" className="gap-11">
+        {navItems.map((item) => (
+          <NavbarItem
+            as={Link}
+            href={item.href}
+            key={item.label}
+            className="cursor-pointer text-white/70 transition-colors hover:text-white/90"
           >
-            Features
-          </button>
-        </NavbarItem>
-
-        <NavbarItem>
-          <button
-            onClick={() => scrollToSection("pricing")}
-            className="font-inherit cursor-pointer border-none bg-transparent p-0 text-white/70 transition-colors hover:text-white/90"
-          >
-            Pricing
-          </button>
-        </NavbarItem>
+            {item.label}
+          </NavbarItem>
+        ))}
       </NavbarContent>
 
       <NavbarContent justify="end">

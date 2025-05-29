@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Ensure proper backdrop for navbar and other components over the animated background */
 @layer components {
   .backdrop-blur-navbar {
