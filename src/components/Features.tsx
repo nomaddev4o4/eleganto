@@ -94,7 +94,7 @@ export default function Features() {
   });
 
   return (
-    <main id="features" ref={cardContainer} className="relative py-20">
+    <main id="features" ref={cardContainer} className="relative px-2 py-20">
       <motion.div
         className="mb-20 text-center"
         initial={{ opacity: 0, y: 40 }}

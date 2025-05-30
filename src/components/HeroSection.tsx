@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <main className="flex h-screen flex-col items-center justify-center">
+    <main className="mt-[120px] flex flex-col">
       <div className="flex flex-col items-center gap-12">
         <div className="text-center text-8xl font-medium">
           <motion.p
@@ -69,7 +69,8 @@ export default function HeroSection() {
           }}
         >
           <p className="text-lg leading-relaxed text-white/60">
-            Generate fully functional, stunning, production-ready websites
+            Generate fully functional, stunning, <br className="sm:hidden" />
+            production-ready websites
           </p>
         </motion.div>
         <motion.div

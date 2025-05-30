@@ -10,7 +10,7 @@ export default function BultWith() {
     <div className="relative mx-auto h-screen max-w-screen-xl">
       <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform text-center">
         <motion.h1
-          className="text-over-gradient bg-gradient-to-b from-white/90 to-white/30 bg-clip-text text-4xl font-bold text-transparent drop-shadow-2xl sm:text-5xl md:text-6xl lg:text-7xl"
+          className="text-over-gradient bg-gradient-to-b from-white/90 to-white/30 bg-clip-text text-6xl font-bold text-transparent drop-shadow-2xl"
           initial={{ opacity: 0, y: 60, scale: 0.8 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
@@ -25,7 +25,7 @@ export default function BultWith() {
           Powered by
         </motion.h1>
         <motion.h2
-          className="text-over-gradient bg-gradient-to-b from-white/90 to-white/30 bg-clip-text text-4xl font-bold text-transparent drop-shadow-2xl sm:text-6xl md:text-7xl lg:text-8xl"
+          className="text-over-gradient bg-gradient-to-b from-white/90 to-white/30 bg-clip-text text-8xl font-bold text-transparent drop-shadow-2xl"
           initial={{ opacity: 0, y: 60, scale: 0.8 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
@@ -95,7 +95,9 @@ export default function BultWith() {
           </Button>
         </motion.div>
       </div>
-      <ComponentsGroup />
+      <div className="hidden md:block">
+        <ComponentsGroup />
+      </div>
     </div>
   );
 }
