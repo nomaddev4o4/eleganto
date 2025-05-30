@@ -51,7 +51,7 @@ export default function BultWith() {
             delay: 0.6,
           }}
         >
-          The modern React UI library trusted by thousands
+          Beautiful, accessible components <br /> that developers love
         </motion.p>
         <motion.div
           className="mx-auto mt-6 w-fit"
